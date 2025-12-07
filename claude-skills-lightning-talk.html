@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(Claude) Skills</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/black.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/monokai.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .reveal pre { width: 100%; margin: 0; }
+    .reveal pre code { max-height: none; padding: 1rem; }
+    .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+    .reveal ul, .reveal ol { display: block; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Slide 0: Title -->
+      <section data-background-color="#0f172a">
+        <h1 class="text-7xl font-bold text-slate-100">(Claude) Skills</h1>
+      </section>
+
+      <!-- Slide 1: Hook -->
+      <section data-background-color="#1e293b">
+        <h2 class="text-4xl font-bold text-slate-100 mb-12">The ceiling keeps moving.</h2>
+
+        <div class="grid grid-cols-2 gap-8 items-center">
+          <div class="fragment">
+            <div class="bg-slate-800 p-8 rounded-lg">
+              <p class="text-2xl text-green-300 font-semibold mb-4">🔐 Steganography Library</p>
+              <p class="text-xl text-slate-300">Python → Rust • ~20% more resilient</p>
+              <p class="text-xl text-slate-300 mt-2">Weekend project, part-time effort</p>
+              <p class="text-lg text-slate-400 mt-4">I know nothing about steganography.</p>
+            </div>
+          </div>
+          <div class="fragment">
+            <video src="zig game engine.mov" autoplay loop muted class="rounded-lg shadow-2xl w-full"></video>
+            <p class="text-lg text-slate-400 mt-4">I don't know Zig, or anything about game programming.</p>
+          </div>
+        </div>
+
+        <aside class="notes">
+          <p><strong>I</strong> ported a steganography library from Python to Rust. Weekend project. Very part-time effort. When I ran stress tests, I found the binary is ~20% more resilient than the original. I know nothing about steganography.</p>
+          <p><strong>Then</strong> I built a 3D game engine in Zig. 60 FPS. Physics. Bots. I don't know Zig or game programming.</p>
+        </aside>
+      </section>
+
+      <!-- Slide 2: The Fond -->
+      <section data-background-color="#0f172a">
+        <div class="grid grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="fond.png" alt="Pan with fond" class="rounded-lg shadow-2xl w-full">
+          </div>
+          <div>
+            <h2 class="text-4xl font-bold text-slate-100 mb-6">The Fond</h2>
+            <p class="fragment text-xl text-slate-400 mb-4">Here's what made this possible...</p>
+            <p class="fragment text-xl text-slate-300 mb-4">In cooking, the browned bits left on the pan. Concentrated flavor. Throwing them away is waste.</p>
+            <p class="fragment text-xl text-yellow-300">Every AI session leaves fond behind.</p>
+            <p class="fragment text-xl text-slate-300 mt-4">Patterns. Decisions. Lessons.</p>
+            <p class="fragment text-2xl text-green-300 mt-6 font-semibold">Learn to deglaze.</p>
+          </div>
+        </div>
+
+        <aside class="notes">
+          <p><strong>Here's</strong> what made this possible.</p>
+          <p><strong>The</strong> fond. Browned bits on the pan. Concentrated flavor. Most of us throw it away.</p>
+          <p><strong>Every</strong> AI session leaves fond behind.</p>
+          <p><strong>Patterns</strong>. Decisions. Lessons.</p>
+          <p><strong>Learn</strong> to deglaze. Use your fond.</p>
+        </aside>
+      </section>
+
+      <!-- Slide 3: Durable Plans -->
+      <section data-background-color="#1e293b">
+        <h2 class="text-4xl font-bold text-slate-100 mb-8">Durable Plans</h2>
+
+        <div class="grid grid-cols-2 gap-12 mt-8">
+          <div class="fragment">
+            <div class="bg-red-900/30 p-6 rounded-lg border border-red-500/50">
+              <p class="text-2xl text-red-300 font-semibold mb-4">❌ Problem</p>
+              <p class="text-xl text-slate-300">Your plan lives in the session.</p>
+              <p class="text-lg text-slate-400 mt-2">Session crashes → context lost → start over.</p>
+            </div>
+          </div>
+          <div class="fragment">
+            <div class="bg-green-900/30 p-6 rounded-lg border border-green-500/50">
+              <p class="text-2xl text-green-300 font-semibold mb-4">✅ Solution</p>
+              <p class="text-xl text-slate-300">write-plan skill → docs/plans/</p>
+              <img src="plans.png" alt="Plans directory" class="rounded-lg mt-3 max-h-20">
+            </div>
+          </div>
+        </div>
+
+        <p class="fragment text-2xl text-yellow-300 mt-10 font-semibold">Plans accumulate. Never overwrite.</p>
+
+        <aside class="notes">
+          <p><strong>Problem</strong>: Your plan lives in the session. Session crashes, context lost, start over.</p>
+          <p><strong>Solution</strong>: Durable plans. The write-plan skill writes to docs/plans/.</p>
+          <p><strong>Key</strong>: Plans accumulate. Never overwrite. Every plan becomes context you can reference.</p>
+        </aside>
+      </section>
+
+      <!-- Slide 4: Conversations -->
+      <section data-background-color="#0f172a">
+        <h2 class="text-4xl font-bold text-slate-100 mb-8">Conversations</h2>
+
+        <div class="grid grid-cols-2 gap-12 mt-8">
+          <div class="fragment">
+            <div class="bg-red-900/30 p-6 rounded-lg border border-red-500/50">
+              <p class="text-2xl text-red-300 font-semibold mb-4">❌ Problem</p>
+              <p class="text-xl text-slate-300">Claude discards your conversations.</p>
+              <p class="text-lg text-slate-400 mt-2">They're full of decisions, context, approaches.</p>
+            </div>
+          </div>
+          <div class="fragment">
+            <div class="bg-green-900/30 p-6 rounded-lg border border-green-500/50">
+              <p class="text-2xl text-green-300 font-semibold mb-4">✅ Solution</p>
+              <p class="text-xl text-slate-300">episodic-memory skill</p>
+              <p class="text-lg text-slate-400 mt-2">Local SQLite + vector DB. Query by task or semantic search.</p>
+              <p class="text-sm text-slate-500 mt-3 font-mono">github.com/obra/episodic-memory</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="fragment text-2xl text-yellow-300 mt-10 font-semibold">Your conversations become searchable memory.</p>
+
+        <aside class="notes">
+          <p><strong>Problem</strong>: Claude discards your conversations after a while. They're full of decisions, context, approaches.</p>
+          <p><strong>Solution</strong>: Episodic memory skill. Stores conversations locally. SQLite + vector DB. Query by task type or semantic search.</p>
+          <p><strong>Your</strong> conversations become searchable memory. Context you can query.</p>
+        </aside>
+      </section>
+
+      <!-- Slide 5: Deglaze -->
+      <section data-background-color="#1e293b">
+        <h2 class="text-4xl font-bold text-slate-100 mb-6">Deglaze</h2>
+
+        <p class="text-xl text-slate-300 mb-6">Harvest the fond.</p>
+
+        <div class="grid grid-cols-2 gap-8 mt-4">
+          <div class="bg-slate-800 p-5 rounded-lg">
+            <p class="text-xl text-blue-300 font-semibold mb-3">What you have:</p>
+            <ul class="text-lg text-slate-300 space-y-1">
+              <li class="fragment">What you tried</li>
+              <li class="fragment">How it went</li>
+              <li class="fragment">What AI missed</li>
+              <li class="fragment">Code review feedback</li>
+              <li class="fragment">PM feedback</li>
+              <li class="fragment text-slate-400">(potentially) Sentry errors</li>
+            </ul>
+          </div>
+          <div class="fragment">
+            <div class="bg-slate-800 p-5 rounded-lg">
+              <p class="text-xl text-green-300 font-semibold mb-3">Codify into:</p>
+              <ul class="text-lg text-slate-300 space-y-1">
+                <li><span class="text-purple-300">AGENTS.md</span> — repo guidance</li>
+                <li><span class="text-green-300">Skills</span> — reusable workflows</li>
+                <li><span class="text-yellow-300">Commands</span> — common tasks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="fragment text-2xl text-yellow-300 mt-8 font-semibold">Extract knowledge. Use the system to improve the system.</p>
+
+        <aside class="notes">
+          <p>(on slide) <strong>Harvest</strong> the fond. All this information lives in .md files.</p>
+          <p><strong>What</strong> you tried. The approaches, the experiments.</p>
+          <p><strong>How</strong> it went. What worked, what didn't.</p>
+          <p><strong>What</strong> AI missed. The gaps you had to fill.</p>
+          <p><strong>Code</strong> review feedback. What your peers caught.</p>
+          <p><strong>PM</strong> feedback. Requirements you misunderstood.</p>
+          <p><strong>Sentry</strong> errors. What broke in production.</p>
+          <p><strong>Codify</strong> into AGENTS.md, Skills, Commands. Make it permanent.</p>
+          <p><strong>Extract</strong> knowledge. Use the system to improve the system.</p>
+        </aside>
+      </section>
+
+      <!-- Slide 6: The Workflow -->
+      <section data-background-color="#0f172a">
+        <h2 class="text-4xl font-bold text-slate-100 mb-8">The Workflow</h2>
+
+        <p class="text-xl text-slate-400 mb-6">And here's the system that makes this easy. Free.</p>
+
+        <div class="fragment">
+          <p class="text-xl text-slate-400 mb-2">Prompt:</p>
+          <p class="text-2xl text-slate-300 italic">"Using your writing plans skill, implement a plan for..."</p>
+        </div>
+
+        <div class="fragment">
+          <div class="flex items-center justify-center gap-3 text-lg mb-4">
+            <span class="bg-blue-900/50 px-4 py-2 rounded text-blue-300 border border-blue-500/50">Fresh worktree</span>
+            <span class="text-slate-500">→</span>
+            <span class="text-slate-400">then per task:</span>
+          </div>
+          <div class="flex items-center justify-center gap-3 text-lg mb-8">
+            <span class="bg-slate-800 px-4 py-2 rounded text-purple-300">Subagent</span>
+            <span class="text-slate-500">→</span>
+            <span class="bg-slate-800 px-4 py-2 rounded text-green-300">TDD</span>
+            <span class="text-slate-500">→</span>
+            <span class="bg-slate-800 px-4 py-2 rounded text-yellow-300">Code review</span>
+            <span class="text-slate-500">→</span>
+            <span class="bg-slate-800 px-4 py-2 rounded text-slate-300">Commit</span>
+          </div>
+          <p class="text-xl text-slate-400">Automatic. Quality gates at every step.</p>
+        </div>
+
+        <p class="fragment text-2xl text-green-300 mt-8 font-semibold">Higher quality work. Code that actually works.</p>
+
+        <div class="fragment mt-8 bg-slate-800 p-4 rounded-lg inline-block">
+          <p class="text-lg text-slate-300 font-mono">/plugin marketplace add obra/superpowers-marketplace</p>
+          <p class="text-lg text-slate-300 font-mono">/plugin install superpowers@superpowers-marketplace</p>
+        </div>
+
+        <aside class="notes">
+          <p>(on slide) <strong>Here's</strong> the system that makes this easy. And it's free.</p>
+          <p><strong>Prompt</strong>: Using your writing plans skill, implement a plan for...</p>
+          <p><strong>Each</strong> task: fresh git worktree, subagent implements with TDD, code review before commit.</p>
+          <p><strong>Result</strong>: Higher quality work. Code that actually works.</p>
+          <p><strong>Install</strong>: Two commands. That's it.</p>
+        </aside>
+      </section>
+
+      <!-- Slide 7: Reduce -->
+      <section data-background-color="#1e293b">
+        <h2 class="text-4xl font-bold text-slate-100 mb-8">Reduce</h2>
+
+        <p class="text-2xl text-slate-300 mb-2">Good skills take time.</p>
+        <p class="fragment text-2xl text-slate-300 mb-6">Great skills involve strong editing and discussion.</p>
+
+        <div class="fragment flex items-center justify-center gap-3 text-xl mt-6">
+          <div class="bg-red-900/50 px-5 py-3 rounded-lg">
+            <p class="text-red-300">v1</p>
+          </div>
+          <span class="text-slate-500 text-2xl">→</span>
+          <div class="bg-yellow-900/50 px-5 py-3 rounded-lg">
+            <p class="text-yellow-300">v2</p>
+          </div>
+          <span class="text-slate-500 text-2xl">→</span>
+          <div class="bg-blue-900/50 px-5 py-3 rounded-lg">
+            <p class="text-blue-300">v3</p>
+          </div>
+          <span class="text-slate-500 text-2xl">→</span>
+          <div class="bg-green-900/50 px-5 py-3 rounded-lg border-2 border-green-400">
+            <p class="text-green-300">v4+</p>
+          </div>
+        </div>
+
+        <div class="fragment mt-6">
+          <p class="text-xl text-slate-300"><span class="text-blue-300">3-5 conversations</span> per version.</p>
+          <p class="text-xl text-slate-300 mt-1"><span class="text-green-300">3-5 versions</span> before genuinely good.</p>
+        </div>
+
+        <div class="fragment mt-8 bg-slate-800 p-5 rounded-lg inline-block">
+          <p class="text-xl text-yellow-300 font-semibold">One thing I wish I'd done earlier:</p>
+          <p class="text-xl text-slate-300 mt-2">Keep release notes per skill. Track what changed and why.</p>
+        </div>
+
+        <p class="fragment text-2xl text-green-300 mt-8 font-semibold">Continual improvement. The skill gets better. So do you.</p>
+
+        <aside class="notes">
+          <p><strong>Good</strong> skills take time. Great skills involve strong editing and discussion.</p>
+          <p><strong>v1</strong> is rough. v2 is better. v3 starts working. v4 is reliable.</p>
+          <p><strong>Each</strong> version is 3-5 conversations. Each skill is 3-5 versions before genuinely good.</p>
+          <p><strong>One</strong> thing I wish I'd done earlier: keep release notes per skill. Track what changed and why.</p>
+          <p><strong>Continual</strong> improvement. The skill gets better. So do you.</p>
+        </aside>
+      </section>
+
+      <!-- Slide 8: CTA -->
+      <section data-background-color="#0f172a">
+        <h2 class="text-5xl font-bold text-slate-100 mb-12">Accumulate. Don't overwrite.</h2>
+
+        <div class="grid grid-cols-2 gap-12 mt-8">
+          <div class="fragment">
+            <div class="bg-slate-800 p-8 rounded-lg">
+              <p class="text-2xl text-blue-300 font-semibold mb-4">📁 docs/plans/</p>
+              <p class="text-xl text-slate-300">Start a directory today.</p>
+              <p class="text-lg text-slate-400 mt-2">Plans. Conversations. Skill drafts.</p>
+            </div>
+          </div>
+          <div class="fragment">
+            <div class="bg-slate-800 p-8 rounded-lg">
+              <p class="text-2xl text-purple-300 font-semibold mb-4">🔧 github.com/obra/superpowers</p>
+              <p class="text-xl text-slate-300">All the skills I mentioned.</p>
+              <p class="text-lg text-slate-400 mt-2">write-plan, episodic-memory, TDD, and more.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="fragment text-2xl text-slate-300 mt-10">Questions? Happy to pair on building your first skill.</p>
+
+        <aside class="notes">
+          <p>(on slide) <strong>Use</strong> your fond. Accumulate. Don't overwrite.</p>
+          <p><strong>Start</strong> a docs/plans/ directory today.</p>
+          <p><strong>Check</strong> out Obra Superpowers. The skills I mentioned live there.</p>
+          <p><strong>Questions?</strong> Happy to pair on building your first skill.</p>
+        </aside>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      slideNumber: 'c/t',
+      hash: true,
+      width: '100%',
+      height: '100%',
+      transition: 'slide',
+      controls: true,
+      progress: true,
+      keyboard: true,
+      overview: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html>
