@@ -27,8 +27,8 @@
 
         <aside class="notes">
           <p>(on slide) <strong>This</strong> talk changed from when I proposed it.</p>
-          <p><strong>I tried</strong> a lot of skills across a lot of domains. I thought I'd come to you with a picklist of nice, interesting things to try. But the ceiling kept on moving.</p>
-          <p><strong>I discovered</strong> something deeper and more important. You'll get skill recommendations, but it's that deeper learning I really want to share with you.</p>
+          <p><strong>I tried</strong> a lot of skills. Each time I thought I'd hit the ceiling, it moved.</p>
+          <p><strong>I found</strong> something deeper. You'll get skill recommendations, but it's that deeper learning I really want to share with you.</p>
         </aside>
       </section>
 
@@ -142,7 +142,6 @@
         <aside class="notes">
           <p><strong>Problem</strong>: Claude discards your conversations after a while. They're full of decisions, context, approaches.</p>
           <p><strong>Solution</strong>: I recommend you go get the episodic memory skill. This indexes all your conversations locally in a SQLite vector database.</p>
-          <p><strong>This</strong> lets you tell Claude things like "Hey, can we resume work on that custom fields Sentry fix we were working on sometime in the past couple of days?"</p>
           <p><strong>Your</strong> conversations become searchable memory.</p>
         </aside>
       </section>
@@ -185,12 +184,8 @@
 
         <aside class="notes">
           <p>(on slide) <strong>Now</strong> we harvest. Look at what you have.</p>
-          <p><strong>What</strong> you tried—approaches, experiments.</p>
-          <p><strong>How</strong> it went—what worked, what didn't.</p>
-          <p><strong>What</strong> AI missed—gaps you filled.</p>
-          <p><strong>Code</strong> review—what peers caught.</p>
-          <p><strong>PM</strong> feedback—misunderstood requirements.</p>
-          <p><strong>Sentry</strong>—what broke in production.</p>
+          <p><strong>What</strong> you tried, how it went, what AI missed.</p>
+          <p><strong>Feedback</strong> from code review, PM, maybe Sentry.</p>
           <p><strong>Harvest</strong> these. Turn into AGENTS.md, Skills, Commands.</p>
           <p><strong>Extract</strong> knowledge. Improve the system with the system.</p>
           <p><strong>writing-skills</strong> in Superpowers helps turn fond into skills.</p>
@@ -237,7 +232,6 @@
           <p>(on slide) <strong>Here's</strong> what I do to make fond collection automatic. You can go install this and use it right now.</p>
           <p><strong>Prompt</strong>: "Using your writing plans skill, implement a plan for..." whatever you're building.</p>
           <p><strong>This</strong> produces a document full of tasks and subtasks. Each task has exact file paths, code snippets, test commands—everything you need to implement it.</p>
-          <p><strong>I review</strong> the plan. Sometimes I push back, ask for changes. Once I'm satisfied with the approach, I move on to the executing-plans skill.</p>
           <p><strong>This</strong> automates everything you see here. Fresh git worktree for isolation. Then for each task: a subagent implements it with TDD, code review before commit.</p>
           <p><strong>Result</strong>: Higher quality work. Code that actually works. And the plan document? That's fond. It's saved in docs/plans/. You keep it.</p>
           <p><strong>Install</strong>: Two commands. That's it.</p>
@@ -273,7 +267,6 @@
 
         <aside class="notes">
           <p>(on slide) <strong>As</strong> you collect fond—your plans and conversations—you'll start noticing trends. What's working. What's not. What corrections you keep making.</p>
-          <p><strong>I've</strong> worked on skills around pod messages, creating Reveal JS presentations, and one other I'll mention at the end.</p>
           <p><strong>My experience</strong>: it usually takes 3-5 conversations or completed tasks before you can turn that into a version of a skill.</p>
           <p><strong>Then</strong> it takes 3-5 versions before it starts getting really good and does everything right without you needing to think about it.</p>
           <p><strong>Part</strong> of this is because you need to do it enough to run into all the problems. But also, as the skill improves, new problems and things you didn't think about emerge. You learn.</p>
