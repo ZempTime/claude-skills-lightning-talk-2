@@ -20,12 +20,21 @@
     <div class="slides">
       <!-- Slide 0: Title -->
       <section data-background-color="#0f172a">
-        <h1 class="text-7xl font-bold text-slate-100">(Claude) Skills</h1>
+        <h1 class="text-7xl font-bold text-slate-100 mb-8">(Claude) Skills</h1>
+        <p class="fragment text-2xl text-slate-300">This talk changed from when I proposed it.</p>
+        <p class="fragment text-2xl text-slate-400 mt-4">I tried a lot of skills across a lot of domains. The ceiling kept on moving.</p>
+        <p class="fragment text-2xl text-slate-300 mt-6">You'll get skill recommendations. But I found something deeper to share.</p>
+
+        <aside class="notes">
+          <p>(on slide) <strong>This</strong> talk changed from when I proposed it.</p>
+          <p><strong>I tried</strong> a lot of skills across a lot of domains. I thought I'd come to you with a picklist of nice, interesting things to try. But the ceiling kept on moving.</p>
+          <p><strong>I discovered</strong> something deeper and more important. You'll get skill recommendations, but it's that deeper learning I really want to share with you.</p>
+        </aside>
       </section>
 
       <!-- Slide 1: Hook -->
       <section data-background-color="#1e293b">
-        <h2 class="text-4xl font-bold text-slate-100 mb-12">The ceiling keeps moving.</h2>
+        <h2 class="text-4xl font-bold text-slate-100 mb-12">I built things I had no business building.</h2>
 
         <div class="grid grid-cols-2 gap-8 items-center">
           <div class="fragment">
@@ -37,12 +46,13 @@
             </div>
           </div>
           <div class="fragment">
-            <video src="zig game engine.mov" autoplay loop muted class="rounded-lg shadow-2xl w-full"></video>
+            <video src="zig game engine.mov" autoplay loop muted playsinline controls class="rounded-lg shadow-2xl w-full"></video>
             <p class="text-lg text-slate-400 mt-4">I don't know Zig, or anything about game programming.</p>
           </div>
         </div>
 
         <aside class="notes">
+          <p>(on slide) <strong>Here's</strong> the proof. You can have reach you might not have thought was possible.</p>
           <p><strong>I</strong> ported a steganography library from Python to Rust. Weekend project. Very part-time effort. When I ran stress tests, I found the binary is ~20% more resilient than the original. I know nothing about steganography.</p>
           <p><strong>Then</strong> I built a 3D game engine in Zig. 60 FPS. Physics. Bots. I don't know Zig or game programming.</p>
         </aside>
@@ -81,25 +91,27 @@
           <div class="fragment">
             <div class="bg-red-900/30 p-6 rounded-lg border border-red-500/50">
               <p class="text-2xl text-red-300 font-semibold mb-4">❌ Problem</p>
-              <p class="text-xl text-slate-300">Your plan lives in the session.</p>
-              <p class="text-lg text-slate-400 mt-2">Session crashes → context lost → start over.</p>
+              <p class="text-xl text-slate-300">Using a markdown doc, then deleting it.</p>
+              <p class="text-lg text-slate-400 mt-2">All that thinking—gone when the feature ships.</p>
             </div>
           </div>
           <div class="fragment">
             <div class="bg-green-900/30 p-6 rounded-lg border border-green-500/50">
               <p class="text-2xl text-green-300 font-semibold mb-4">✅ Solution</p>
-              <p class="text-xl text-slate-300">write-plan skill → docs/plans/</p>
-              <img src="plans.png" alt="Plans directory" class="rounded-lg mt-3 max-h-20">
+              <p class="text-xl text-slate-300">Store plans in a durable place.</p>
+              <p class="text-sm text-slate-500 mt-3 font-mono">/superpowers:write-plan → docs/plans/</p>
             </div>
           </div>
         </div>
 
-        <p class="fragment text-2xl text-yellow-300 mt-10 font-semibold">Plans accumulate. Never overwrite.</p>
+        <p class="fragment text-2xl text-yellow-300 mt-10 font-semibold">Keep your plans. This is the first major source of fond.</p>
 
         <aside class="notes">
-          <p><strong>Problem</strong>: Your plan lives in the session. Session crashes, context lost, start over.</p>
-          <p><strong>Solution</strong>: Durable plans. The write-plan skill writes to docs/plans/.</p>
-          <p><strong>Key</strong>: Plans accumulate. Never overwrite. Every plan becomes context you can reference.</p>
+          <p>(on slide) <strong>First</strong> thing to capture: your plans.</p>
+          <p><strong>If</strong> you're using a markdown doc and deleting it when you ship—that's fond you're throwing away.</p>
+          <p><strong>Simple</strong> fix: store plans somewhere durable. Doesn't matter how.</p>
+          <p><strong>I use</strong> the Obra Superpowers write-plan skill. Saves everything to docs/plans/ in a consistent format.</p>
+          <p><strong>Keep</strong> your plans.</p>
         </aside>
       </section>
 
@@ -129,8 +141,9 @@
 
         <aside class="notes">
           <p><strong>Problem</strong>: Claude discards your conversations after a while. They're full of decisions, context, approaches.</p>
-          <p><strong>Solution</strong>: Episodic memory skill. Stores conversations locally. SQLite + vector DB. Query by task type or semantic search.</p>
-          <p><strong>Your</strong> conversations become searchable memory. Context you can query.</p>
+          <p><strong>Solution</strong>: I recommend you go get the episodic memory skill. This indexes all your conversations locally in a SQLite vector database.</p>
+          <p><strong>This</strong> lets you tell Claude things like "Hey, can we resume work on that custom fields Sentry fix we were working on sometime in the past couple of days?"</p>
+          <p><strong>Your</strong> conversations become searchable memory.</p>
         </aside>
       </section>
 
@@ -166,16 +179,21 @@
 
         <p class="fragment text-2xl text-yellow-300 mt-8 font-semibold">Extract knowledge. Use the system to improve the system.</p>
 
+        <div class="fragment mt-6">
+          <p class="text-sm text-slate-500 font-mono">github.com/obra/superpowers → skills/writing-skills</p>
+        </div>
+
         <aside class="notes">
-          <p>(on slide) <strong>Harvest</strong> the fond. All this information lives in .md files.</p>
-          <p><strong>What</strong> you tried. The approaches, the experiments.</p>
-          <p><strong>How</strong> it went. What worked, what didn't.</p>
-          <p><strong>What</strong> AI missed. The gaps you had to fill.</p>
-          <p><strong>Code</strong> review feedback. What your peers caught.</p>
-          <p><strong>PM</strong> feedback. Requirements you misunderstood.</p>
-          <p><strong>Sentry</strong> errors. What broke in production.</p>
-          <p><strong>Codify</strong> into AGENTS.md, Skills, Commands. Make it permanent.</p>
-          <p><strong>Extract</strong> knowledge. Use the system to improve the system.</p>
+          <p>(on slide) <strong>Now</strong> we harvest. Look at what you have.</p>
+          <p><strong>What</strong> you tried—approaches, experiments.</p>
+          <p><strong>How</strong> it went—what worked, what didn't.</p>
+          <p><strong>What</strong> AI missed—gaps you filled.</p>
+          <p><strong>Code</strong> review—what peers caught.</p>
+          <p><strong>PM</strong> feedback—misunderstood requirements.</p>
+          <p><strong>Sentry</strong>—what broke in production.</p>
+          <p><strong>Harvest</strong> these. Turn into AGENTS.md, Skills, Commands.</p>
+          <p><strong>Extract</strong> knowledge. Improve the system with the system.</p>
+          <p><strong>writing-skills</strong> in Superpowers helps turn fond into skills.</p>
         </aside>
       </section>
 
@@ -183,7 +201,7 @@
       <section data-background-color="#0f172a">
         <h2 class="text-4xl font-bold text-slate-100 mb-8">The Workflow</h2>
 
-        <p class="text-xl text-slate-400 mb-6">And here's the system that makes this easy. Free.</p>
+        <p class="text-xl text-slate-400 mb-6">Here's what I do to make fond collection automatic.</p>
 
         <div class="fragment">
           <p class="text-xl text-slate-400 mb-2">Prompt:</p>
@@ -216,88 +234,113 @@
         </div>
 
         <aside class="notes">
-          <p>(on slide) <strong>Here's</strong> the system that makes this easy. And it's free.</p>
-          <p><strong>Prompt</strong>: Using your writing plans skill, implement a plan for...</p>
-          <p><strong>Each</strong> task: fresh git worktree, subagent implements with TDD, code review before commit.</p>
-          <p><strong>Result</strong>: Higher quality work. Code that actually works.</p>
+          <p>(on slide) <strong>Here's</strong> what I do to make fond collection automatic. You can go install this and use it right now.</p>
+          <p><strong>Prompt</strong>: "Using your writing plans skill, implement a plan for..." whatever you're building.</p>
+          <p><strong>This</strong> produces a document full of tasks and subtasks. Each task has exact file paths, code snippets, test commands—everything you need to implement it.</p>
+          <p><strong>I review</strong> the plan. Sometimes I push back, ask for changes. Once I'm satisfied with the approach, I move on to the executing-plans skill.</p>
+          <p><strong>This</strong> automates everything you see here. Fresh git worktree for isolation. Then for each task: a subagent implements it with TDD, code review before commit.</p>
+          <p><strong>Result</strong>: Higher quality work. Code that actually works. And the plan document? That's fond. It's saved in docs/plans/. You keep it.</p>
           <p><strong>Install</strong>: Two commands. That's it.</p>
         </aside>
       </section>
 
       <!-- Slide 7: Reduce -->
       <section data-background-color="#1e293b">
-        <h2 class="text-4xl font-bold text-slate-100 mb-8">Reduce</h2>
+        <h2 class="text-4xl font-bold text-slate-100 mb-6">Reduce</h2>
 
-        <p class="text-2xl text-slate-300 mb-2">Good skills take time.</p>
-        <p class="fragment text-2xl text-slate-300 mb-6">Great skills involve strong editing and discussion.</p>
+        <p class="text-xl text-slate-300 mb-8">As you collect fond, you'll notice trends. What works. What doesn't.</p>
 
-        <div class="fragment flex items-center justify-center gap-3 text-xl mt-6">
-          <div class="bg-red-900/50 px-5 py-3 rounded-lg">
-            <p class="text-red-300">v1</p>
+        <div class="fragment grid grid-cols-2 gap-12 mt-6">
+          <div class="bg-slate-800 p-6 rounded-lg text-center">
+            <p class="text-3xl text-blue-300 font-bold mb-2">3-5 conversations</p>
+            <p class="text-2xl text-slate-500 mb-2">↓</p>
+            <p class="text-xl text-slate-300">1 skill version</p>
           </div>
-          <span class="text-slate-500 text-2xl">→</span>
-          <div class="bg-yellow-900/50 px-5 py-3 rounded-lg">
-            <p class="text-yellow-300">v2</p>
-          </div>
-          <span class="text-slate-500 text-2xl">→</span>
-          <div class="bg-blue-900/50 px-5 py-3 rounded-lg">
-            <p class="text-blue-300">v3</p>
-          </div>
-          <span class="text-slate-500 text-2xl">→</span>
-          <div class="bg-green-900/50 px-5 py-3 rounded-lg border-2 border-green-400">
-            <p class="text-green-300">v4+</p>
+          <div class="bg-slate-800 p-6 rounded-lg text-center">
+            <p class="text-3xl text-green-300 font-bold mb-2">3-5 versions</p>
+            <p class="text-2xl text-slate-500 mb-2">↓</p>
+            <p class="text-xl text-slate-300">genuinely good skill</p>
           </div>
         </div>
 
-        <div class="fragment mt-6">
-          <p class="text-xl text-slate-300"><span class="text-blue-300">3-5 conversations</span> per version.</p>
-          <p class="text-xl text-slate-300 mt-1"><span class="text-green-300">3-5 versions</span> before genuinely good.</p>
+        <p class="fragment text-xl text-slate-400 mt-8">You encounter problems. As it improves, new ones emerge. You learn.</p>
+
+        <div class="fragment mt-6 bg-slate-800 p-4 rounded-lg inline-block">
+          <p class="text-lg text-yellow-300">Keep release notes per skill. Track what changed and why.</p>
         </div>
 
-        <div class="fragment mt-8 bg-slate-800 p-5 rounded-lg inline-block">
-          <p class="text-xl text-yellow-300 font-semibold">One thing I wish I'd done earlier:</p>
-          <p class="text-xl text-slate-300 mt-2">Keep release notes per skill. Track what changed and why.</p>
-        </div>
-
-        <p class="fragment text-2xl text-green-300 mt-8 font-semibold">Continual improvement. The skill gets better. So do you.</p>
+        <p class="fragment text-2xl text-green-300 mt-8 font-semibold">Things get better and easier. Every time.</p>
 
         <aside class="notes">
-          <p><strong>Good</strong> skills take time. Great skills involve strong editing and discussion.</p>
-          <p><strong>v1</strong> is rough. v2 is better. v3 starts working. v4 is reliable.</p>
-          <p><strong>Each</strong> version is 3-5 conversations. Each skill is 3-5 versions before genuinely good.</p>
-          <p><strong>One</strong> thing I wish I'd done earlier: keep release notes per skill. Track what changed and why.</p>
-          <p><strong>Continual</strong> improvement. The skill gets better. So do you.</p>
+          <p>(on slide) <strong>As</strong> you collect fond—your plans and conversations—you'll start noticing trends. What's working. What's not. What corrections you keep making.</p>
+          <p><strong>I've</strong> worked on skills around pod messages, creating Reveal JS presentations, and one other I'll mention at the end.</p>
+          <p><strong>My experience</strong>: it usually takes 3-5 conversations or completed tasks before you can turn that into a version of a skill.</p>
+          <p><strong>Then</strong> it takes 3-5 versions before it starts getting really good and does everything right without you needing to think about it.</p>
+          <p><strong>Part</strong> of this is because you need to do it enough to run into all the problems. But also, as the skill improves, new problems and things you didn't think about emerge. You learn.</p>
+          <p><strong>One</strong> thing I'd suggest: if you start working on a skill, keep some release notes about what problems you tackled in each version. This is something I wish I would have done.</p>
+          <p><strong>But</strong> as you do this in a specific domain, you'll notice things just start getting better and easier.</p>
         </aside>
       </section>
 
       <!-- Slide 8: CTA -->
       <section data-background-color="#0f172a">
-        <h2 class="text-5xl font-bold text-slate-100 mb-12">Accumulate. Don't overwrite.</h2>
+        <h2 class="text-5xl font-bold text-slate-100 mb-10">Use your fond.</h2>
 
-        <div class="grid grid-cols-2 gap-12 mt-8">
-          <div class="fragment">
-            <div class="bg-slate-800 p-8 rounded-lg">
-              <p class="text-2xl text-blue-300 font-semibold mb-4">📁 docs/plans/</p>
-              <p class="text-xl text-slate-300">Start a directory today.</p>
-              <p class="text-lg text-slate-400 mt-2">Plans. Conversations. Skill drafts.</p>
-            </div>
+        <div class="flex justify-center gap-6 mt-8">
+          <div class="fragment bg-slate-800 px-6 py-4 rounded-lg">
+            <p class="text-xl text-blue-300 font-semibold">Keep your plans.</p>
           </div>
-          <div class="fragment">
-            <div class="bg-slate-800 p-8 rounded-lg">
-              <p class="text-2xl text-purple-300 font-semibold mb-4">🔧 github.com/obra/superpowers</p>
-              <p class="text-xl text-slate-300">All the skills I mentioned.</p>
-              <p class="text-lg text-slate-400 mt-2">write-plan, episodic-memory, TDD, and more.</p>
-            </div>
+          <div class="fragment bg-slate-800 px-6 py-4 rounded-lg">
+            <p class="text-xl text-green-300 font-semibold">Keep your conversations.</p>
           </div>
+          <div class="fragment bg-slate-800 px-6 py-4 rounded-lg">
+            <p class="text-xl text-yellow-300 font-semibold">Extract into skills.</p>
+          </div>
+        </div>
+
+        <div class="fragment mt-10 bg-slate-800 p-6 rounded-lg inline-block">
+          <p class="text-xl text-purple-300 font-semibold mb-2">Get started: github.com/obra/superpowers</p>
+          <p class="text-lg text-slate-400">write-plan, episodic-memory, writing-skills, and more.</p>
         </div>
 
         <p class="fragment text-2xl text-slate-300 mt-10">Questions? Happy to pair on building your first skill.</p>
 
         <aside class="notes">
-          <p>(on slide) <strong>Use</strong> your fond. Accumulate. Don't overwrite.</p>
-          <p><strong>Start</strong> a docs/plans/ directory today.</p>
-          <p><strong>Check</strong> out Obra Superpowers. The skills I mentioned live there.</p>
+          <p>(on slide) <strong>Use</strong> your fond. That's the message.</p>
+          <p><strong>Keep</strong> your plans. Don't delete them when you ship.</p>
+          <p><strong>Keep</strong> your conversations. They're full of decisions and context.</p>
+          <p><strong>Extract</strong> what you learn into skills. Use the system to improve the system.</p>
+          <p><strong>If</strong> you want to get started quickly, check out Obra Superpowers. All the skills I mentioned are there—write-plan, episodic-memory, writing-skills, and more.</p>
           <p><strong>Questions?</strong> Happy to pair on building your first skill.</p>
+        </aside>
+      </section>
+
+      <!-- Slide 9: Bonus - Affordances -->
+      <section data-background-color="#1e293b">
+        <h2 class="text-4xl font-bold text-slate-100 mb-8">Bonus: Affordances Skill</h2>
+
+        <p class="text-xl text-slate-400 mb-10">Building on what we just learned...</p>
+
+        <div class="fragment">
+          <p class="text-3xl text-green-300 font-semibold mb-4">Better organized models.</p>
+        </div>
+
+        <div class="fragment">
+          <p class="text-3xl text-blue-300 font-semibold mb-8">API surfaces you understand and remember the first time you read them.</p>
+        </div>
+
+        <div class="fragment mt-10 bg-slate-800 p-6 rounded-lg inline-block">
+          <p class="text-xl text-slate-300">Skill guides extraction. Detects patterns. Ensures consistency.</p>
+        </div>
+
+        <p class="fragment text-2xl text-yellow-300 mt-10 font-semibold">PR incoming. Watch for it.</p>
+
+        <aside class="notes">
+          <p>(on slide) <strong>Building</strong> on what we just learned about affordances...</p>
+          <p><strong>Better</strong> organized models. Fat models become focused.</p>
+          <p><strong>API</strong> surfaces you understand and remember the first time you read them.</p>
+          <p><strong>Skill</strong> guides the extraction. Detects patterns, ensures consistency.</p>
+          <p><strong>PR</strong> incoming. Watch for it.</p>
         </aside>
       </section>
     </div>
